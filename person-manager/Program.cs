@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Person Manager project by pazurk0ta
+// Licensed with MIT license
+// Version 0.1
+
+Console.WriteLine("Program launched successfully!");
