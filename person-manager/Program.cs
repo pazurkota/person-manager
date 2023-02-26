@@ -3,8 +3,9 @@
 // Version 0.1
 
 using person_manager.Model;
+using person_manager.Utility;
 
-// Example:
+// Example person
 Person example = new Person() // Initializing new Person
 {
     ID = 1,
@@ -22,5 +23,9 @@ Person example = new Person() // Initializing new Person
     }
 };
 
+// Json serialization example
+string filePath = "persons.json";
+List<Person> persons = new List<Person>() { example };
 
+JsonSerialization.Serialize(persons, filePath);
 Console.WriteLine(example.ToString());
