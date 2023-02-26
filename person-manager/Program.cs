@@ -1,6 +1,5 @@
 ﻿// Person Manager project by pazurk0ta
 // Licensed with MIT license
-// Version 0.1
 
 using person_manager.Model;
 using person_manager.Utility;
@@ -23,9 +22,16 @@ Person example = new Person() // Initializing new Person
     }
 };
 
-// Json serialization example
-string filePath = "persons.json";
-List<Person> persons = new List<Person>() { example };
+/* Json serialization example
+ * string filePath = "persons.json";
+ * List<Person> persons = new List<Person>() { example };
+ * 
+ * JsonSerialization.Serialize(persons, filePath);
+ */
 
-JsonSerialization.Serialize(persons, filePath);
-Console.WriteLine(example.ToString());
+/* Json deserialization example
+* string filePath = "persons.json";
+* List<Person> persons = JsonSerialization.Deserialize(filePath);
+* 
+* foreach (Person person in persons) Console.WriteLine(person.ToString());
+*/
