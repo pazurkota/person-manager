@@ -11,6 +11,6 @@ public class Person
 
     public override string ToString()
     {
-        return $"({ID}) {Name} {Surname}, Age: {Age}, PhoneNumber: {PhoneNumber}\nAddress: {Address}";
+        return $"({ID}) {Name} {Surname}, Age: {Age}, Phone Number: {PhoneNumber}\nAddress: {Address}";
     }
 }

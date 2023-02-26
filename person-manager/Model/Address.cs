@@ -9,6 +9,6 @@ public class Address
 
     public override string ToString()
     {
-        return $"{City}, {Street} st. ({HomeNumber}{(ApartmentNumber.HasValue ? $"/{ApartmentNumber}" : "")}";
+        return $"{City}, {Street} st. ({HomeNumber}{(ApartmentNumber.HasValue ? $"/{ApartmentNumber}" : "")})";
     }
 }
