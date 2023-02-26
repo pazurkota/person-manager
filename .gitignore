@@ -1,3 +1,9 @@
+# VSCode files to ignore
+.vscode
+person-manager/obj/Debug/net7.0
+person-manager/bin/Debug/net7.0
+
+# Rider files to ignore
 bin/
 obj/
 /packages/
