@@ -1,9 +1,17 @@
-﻿using static person_manager.Controller.Entry;
+﻿using person_manager.Model;
+using static person_manager.Controller.Entry;
 
 namespace person_manager.Controller;
 
 public class Menu
 {
+    private List<Person> _persons;
+
+    public Menu(List<Person> persons)
+    {
+        _persons = persons;
+    }
+    
     private void showMenu()
     {
         string str = "Person Manager menu";
