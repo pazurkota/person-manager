@@ -2,10 +2,10 @@
 
 public class Address
 {
-    public string City;
-    public string Street;
-    public int HomeNumber;
-    public int? ApartmentNumber; 
+    public string City { get; set; }
+    public string Street { get; set; }
+    public int HomeNumber { get; set; }
+    public int? ApartmentNumber { get; set; }
 
     public override string ToString()
     {

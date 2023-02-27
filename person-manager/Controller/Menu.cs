@@ -25,7 +25,7 @@ public class Menu
         Console.Write(str);
     }
 
-    public void Run()
+    public void Run() // Runs program
     {
         int choice = 0;
 
@@ -36,6 +36,18 @@ public class Menu
 
             switch (choice)
             {
+                case 1:
+                    Console.WriteLine("This option wasn't implemented yet...");
+                    break;
+                case 2:
+                    Console.WriteLine("This option wasn't implemented yet...");
+                    break;
+                case 3:
+                    Console.WriteLine("This option wasn't implemented yet...");
+                    break;
+                case 4:
+                    Console.WriteLine("This option wasn't implemented yet...");
+                    break;
                 case 0:
                     Console.WriteLine("Exiting program...");
                     break;
