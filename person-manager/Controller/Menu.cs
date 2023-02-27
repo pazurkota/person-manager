@@ -1,8 +1,10 @@
-﻿namespace person_manager.Controller;
+﻿using static person_manager.Controller.Entry;
+
+namespace person_manager.Controller;
 
 public class Menu
 {
-    private string showMenu()
+    private void showMenu()
     {
         string str = "Person Manager menu";
 
@@ -10,8 +12,30 @@ public class Menu
         str += "\n2. Show full list";
         str += "\n3. Add new person";
         str += "\n4. Remove person (via ID)";
-        str += "\n0. Exit program";
+        str += "\n0. Exit program\n";
 
-        return str;
+        Console.Write(str);
+    }
+
+    public void Run()
+    {
+        int choice = 0;
+
+        do
+        {
+            showMenu();
+            choice = GetInput(" > ", 4);
+
+            switch (choice)
+            {
+                case 0:
+                    Console.WriteLine("Exiting program...");
+                    break;
+                default:
+                    Console.WriteLine("Invalid input, please try again");
+                    break;
+            }
+            
+        } while (choice != 0);
     }
 }
