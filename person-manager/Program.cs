@@ -23,5 +23,4 @@ Menu menu = new Menu(persons);
 menu.Run();
 
 // Save to .json file (serialize)
-Console.WriteLine($"Saving to {filePath}...");
-JsonSerialization.Serialize(persons, filePath);
+PersonManager.Save(filePath);

@@ -5,7 +5,7 @@ namespace person_manager.Utility;
 
 public class PersonManager
 {
-    public List<Person> Persons;
+    public static List<Person> Persons = JsonSerialization.Deserialize("persons.json");
 
     public static void ShowPersonList()
     {
@@ -16,9 +16,15 @@ public class PersonManager
         Console.WriteLine();
     }
 
-    public static Person AddNewPerson()
+    public static void AddNewPerson()
     {
         Person person = Entry.GetPersonInfo();
-        return person;
+        Persons.Add(person);
+    }
+
+    public static void Save(string filePath)
+    {
+        Console.WriteLine($"Saving to: {filePath}");
+        JsonSerialization.Serialize(Persons, filePath);
     }
 }
