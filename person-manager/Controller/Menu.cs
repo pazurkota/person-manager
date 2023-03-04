@@ -58,7 +58,8 @@ public class Menu
                     PersonManager.ShowPersonList();
                     break;
                 case 3:
-                    Console.WriteLine("This option wasn't implemented yet...");
+                    Console.Clear();
+                    PersonManager.AddNewPerson();
                     break;
                 case 4:
                     Console.WriteLine("This option wasn't implemented yet...");
