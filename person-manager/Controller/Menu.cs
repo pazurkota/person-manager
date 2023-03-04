@@ -1,4 +1,5 @@
 ﻿using person_manager.Model;
+using person_manager.Utility;
 using static person_manager.Controller.Entry;
 
 namespace person_manager.Controller;
@@ -53,7 +54,8 @@ public class Menu
                     about();
                     break;
                 case 2:
-                    Console.WriteLine("This option wasn't implemented yet...");
+                    Console.Clear();
+                    PersonManager.ShowPersonList();
                     break;
                 case 3:
                     Console.WriteLine("This option wasn't implemented yet...");
