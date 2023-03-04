@@ -1,4 +1,5 @@
 ﻿using person_manager.Model;
+using person_manager.Utility;
 using static person_manager.Controller.Entry;
 
 namespace person_manager.Controller;
@@ -12,7 +13,7 @@ public class Menu
         _persons = persons;
     }
     
-    private void showMenu()
+    private void showMenu() // Method to show program options
     {
         string str = "Person Manager menu";
 
@@ -23,6 +24,18 @@ public class Menu
         str += "\n0. Exit program\n";
 
         Console.Write(str);
+    }
+
+    private void about() // "About" section
+    {
+        string str = "About:";
+
+        str += "\nCreated by: pazurk0ta";
+        str += "\nVersion: 1.0";
+        str += "\nLicensed with MIT License";
+        str += "\nRepo: https://github.com/pazurkota/person-manager.git\n";
+        
+        Console.WriteLine(str);
     }
 
     public void Run() // Runs program
@@ -37,10 +50,12 @@ public class Menu
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("This option wasn't implemented yet...");
+                    Console.Clear();
+                    about();
                     break;
                 case 2:
-                    Console.WriteLine("This option wasn't implemented yet...");
+                    Console.Clear();
+                    PersonManager.ShowPersonList();
                     break;
                 case 3:
                     Console.WriteLine("This option wasn't implemented yet...");
