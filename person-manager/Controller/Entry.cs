@@ -75,4 +75,10 @@ public static class Entry
         Console.WriteLine();
         return person;
     }
+
+    public static int GetID()
+    {
+        int id = Convert.ToInt32(Console.ReadLine() ?? throw new ArgumentException("ID cannot be null!"));
+        return id;
+    }
 }

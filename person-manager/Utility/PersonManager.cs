@@ -21,4 +21,11 @@ public class PersonManager
         Person person = Entry.GetPersonInfo();
         Persons.Add(person);
     }
+
+    public static void RemovePerson()
+    {
+        int personId = Entry.GetID();
+        
+        
+    }
 }
