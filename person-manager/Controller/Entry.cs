@@ -78,7 +78,9 @@ public static class Entry
 
     public static int GetID()
     {
+        Console.Write("Enter persons ID > ");
         int id = Convert.ToInt32(Console.ReadLine() ?? throw new ArgumentException("ID cannot be null!"));
+        
         return id;
     }
 }

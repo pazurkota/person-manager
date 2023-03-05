@@ -24,8 +24,14 @@ public class PersonManager
 
     public static void RemovePerson()
     {
-        int personId = Entry.GetID();
-        
-        
+        File.WriteAllText("persons.json", null);
+        int id = Entry.GetID();
+
+        var personToRemove = from person in Persons
+            where person.ID == id
+            select person;
+
+        Persons.RemoveAll(personToRemove => personToRemove.ID == id);
+        JsonSerialization.Serialize(Persons, "persons.json");
     }
 }
