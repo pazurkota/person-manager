@@ -2,26 +2,14 @@
 // Licensed with MIT license
 
 using person_manager.Controller;
-using person_manager.Model;
 using person_manager.Utility;
 
+// File path (changing it is not advised)
 string filePath = "persons.json";
-List<Person> persons;
-
-try
-{
-    persons = JsonSerialization.Deserialize(filePath); // Get persons from .json file (deserialize)
-}
-catch (Exception exc)
-{
-    Console.WriteLine(exc);
-    throw;
-}
 
 // Run program
-Menu menu = new Menu(persons);
+Menu menu = new Menu(PersonManager.Persons);
 menu.Run();
 
 // Save to .json file (serialize)
-Console.WriteLine($"Saving to {filePath}...");
-JsonSerialization.Serialize(persons, filePath);
+JsonSerialization.Serialize(PersonManager.Persons, filePath);

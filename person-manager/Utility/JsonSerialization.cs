@@ -21,6 +21,8 @@ public static class JsonSerialization
     public static List<Person> Deserialize(string filePath)
     {
         string jsonText = File.ReadAllText(filePath);
+        if (jsonText.Length == 0) return new List<Person>(); // Check if persons.json is null and if yes, return empty list
+
         List<Person> persons = JsonSerializer.Deserialize<List<Person>>(jsonText);
         return persons;
     }
