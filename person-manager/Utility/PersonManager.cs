@@ -21,10 +21,4 @@ public class PersonManager
         Person person = Entry.GetPersonInfo();
         Persons.Add(person);
     }
-
-    public static void Save(string filePath)
-    {
-        Console.WriteLine($"Saving to: {filePath}");
-        JsonSerialization.Serialize(Persons, filePath);
-    }
 }
