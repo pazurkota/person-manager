@@ -1,6 +1,5 @@
 ﻿using person_manager.Model;
 using person_manager.Controller;
-using Newtonsoft.Json;
 
 namespace person_manager.Utility;
 
@@ -25,6 +24,14 @@ public class PersonManager
 
     public static void RemovePerson()
     {
-        // @TODO
+        File.WriteAllText("persons.json", null);
+        int id = Entry.GetID();
+
+        var personToRemove = from person in Persons
+            where person.ID == id
+            select person;
+
+        Persons.RemoveAll(personToRemove => personToRemove.ID == id);
+        JsonSerialization.Serialize(Persons, "persons.json");
     }
 }
